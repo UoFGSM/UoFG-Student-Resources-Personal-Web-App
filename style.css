@@ -1,0 +1,150 @@
+:root {
+    --main: #2b296e;
+    --dark_main: #21215c;
+    --light_main: #47519c;
+    --main-text-color: #ffffff;
+}
+
+* {
+    color: var(--main-text-color)
+  }
+
+body {
+    background-color: var(--dark_main);
+}
+
+#bg_img {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    mix-blend-mode: screen;
+    opacity: 25%;
+    z-index: 0;
+}
+
+#header {
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 55px;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
+    background-color: var(--main);
+    z-index: 2;
+}
+
+#student_content {
+    position: absolute; 
+    left: 0; 
+    right: 0; 
+    margin-inline: auto; 
+    width: fit-content;
+    top: 90px;
+    width: 1500px;
+    max-width: 90%;
+    height: 200%;
+    z-index: 1;
+}
+
+#timetable_object {
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin: auto;
+    display: flex;
+    width: 98%;
+    height: 92%;
+}
+
+.content_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    height: 45px;
+    background-color: red;
+}
+
+#week_selector {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 170px;
+    height: 100%;
+}
+
+#info_button:hover {
+    width: 25px;
+}
+
+.student_content_child {
+    width: 100%;
+    background-color: var(--light_main);
+    height: 45%;
+    border-radius: 15px;
+    box-shadow: 0 30px 40px rgba(0,0,0,.1);
+
+    position: relative;
+    margin-bottom: 50px;
+}
+
+@media only screen and (max-width: 600px) {
+    .student_content_child {
+        height: 375px;
+    }
+
+    #student_content {
+        height: 100%;
+    }
+
+    #timetable_object {
+        height: 85%;
+    }
+}
+
+.header_child {
+    max-height: 70%;
+    transition: 0.2s;
+}
+
+.arrow_button {
+    max-height: 75%;
+    transition: 0.2s;
+}
+
+.arrow_button:hover {
+    max-height: 90%;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.timetable_column {
+    background-color: purple;
+    width: 19%;
+}
+
+.timetable_header {
+    background-color: red;
+}
+
+.inner_timetable_column {
+    background-color: blue;
+}
+
+.timetable_class {
+    height: 20%;
+}
